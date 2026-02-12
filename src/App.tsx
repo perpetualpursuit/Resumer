@@ -344,7 +344,7 @@ function App() {
     const writeBullet = (text: string) => {
       const indent = 14
       const lines = doc.splitTextToSize(text, usableWidth - indent)
-      lines.forEach((ln, idx) => {
+      lines.forEach((ln: string, idx: number) => {
         if (idx === 0) {
           doc.text('-', margin, y)
         }
